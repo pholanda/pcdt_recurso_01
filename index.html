@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>PCDT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<div class="clearfix"></div>
+
+	<div class="wrapper">
+		<div class="steps-area steps-area-fixed">
+			<div class="image-holder">
+				<img src="assets/img/pcdt.png" alt="">
+			</div>
+			<div class="steps clearfix" hidden>
+				<ul class="tablist multisteps-form__progress">
+					<li class="multisteps-form__progress-btn js-active current">
+						<span>1</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form class="multisteps-form__form" action="#" id="wizard" method="POST">
+			<div class="form-area position-relative">
+				<!-- div 1 -->
+				<div class="multisteps-form__panel js-active" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<h2>Interpretação e conduta para resultados de testes para Sífilis</h2>
+
+									<div class="budget-area mt-3">
+										<p>Resultado do Primeiro Teste</p>
+										<div class="opti-list">
+											<ul class="d-flex" id="teste_1">
+												<li class="bg-white" id="tp_reagente"><input type="checkbox">Treponêmico Reagente</li>
+												<li class="bg-white" id="ntp_reagente"><input type="checkbox">Não Treponêmico Reagente</li>
+												<li class="bg-white" id="n_reagente"><input type="checkbox">Não Reagente</li>
+											</ul>
+										</div>
+									</div>
+									<div class="budget-area">
+										<p>Resultado do Teste Complementar</p>
+										<div class="opti-list">
+											<ul class="d-flex" id="teste_2">
+												<li class="bg-white" id="tp2_reagente"><input type="checkbox">Treponêmico Reagente</li>
+												<li class="bg-white" id="ntp2_reagente"><input type="checkbox">Não Treponêmico Reagente</li>
+												<li class="bg-white" id="n2_reagente"><input type="checkbox">Não Reagente</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div id="instrucao_1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<h6 class="mb-3">POSSÍVEIS INTERPRETAÇÕES</h6>
+						<p>Diagnóstico de sífilis.</p>
+						<p>Classificação do estágio clínico a ser definida de acordo com o tempo de infecção e o histórico de tratamento.</p>
+						<p>Cicatriz sorológica: tratamento anterior documentado com queda da titulação em pelo menos duas diluições.</p>
+						<hr>
+						<h6 class="mb-3">CONDUTA</h6>
+						<p>Quando sífilis, tratar, realizar monitoramento com teste não treponêmico e notificar o caso de sífilis.</p>
+						<p>Quando confirmado caso de cicatriz sorológica, apenas orientar.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div id="instrucao_2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<h6 class="mb-3">POSSÍVEIS INTERPRETAÇÕES</h6>
+						<p>Realiza-se um terceiro teste treponêmico com metodologia diferente do primeiro.</p>
+						<p>Se reagente, diagnóstico de sífilis ou cicatriz sorológica.</p>
+						<p>Se não reagente, considera- se resultado falso reagente para o primeiro teste, sendo excluído o diagnóstico de sífilis.</p>
+						<p>Se terceiro teste treponêmico não disponível, avaliar exposição de risco, sinais e sintomas e histórico de tratamento para definição de conduta.</p>
+						<hr>
+						<h6 class="mb-3">CONDUTA</h6>
+						<p>Quando sífilis, tratar, realizar monitoramento com teste não treponêmico e notificar o caso de sífilis.</p>
+						<p>Quando confirmado caso de cicatriz sorológica, apenas orientar.</p>
+						<p>Para os casos concluídos como ausência de sífilis, apenas orientar.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div id="instrucao_3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<h6 class="mb-3">POSSÍVEIS INTERPRETAÇÕES</h6>
+						<p>Ausência de infecção ou período de incubação (janela imunológica) de sífilis recente.</p>
+						<hr>
+						<h6 class="mb-3">CONDUTA</h6>
+						<p>Em caso de suspeita clínica e/ ou epidemiológica, solicitar nova coleta de amostra em 30 dias.</p>
+						<p>Isso não deve, no entanto, retardar a instituição do tratamento, caso o diagnóstico de sífilis seja o mais provável (ex.: visualização de úlcera anogenital) ou o retorno da pessoa ao serviço de saúde não possa ser garantido.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+	</div>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/sweetalert2/sweetalert2.all.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		function conduta(dicionario){
+				if ((dicionario['teste_1'] === 'tp_reagente' && dicionario['teste_2'] === 'ntp2_reagente') || (dicionario['teste_1'] === 'ntp_reagente' && dicionario['teste_2'] === 'tp2_reagente')){
+					$('#instrucao_1').modal('show');
+				}else if (dicionario['teste_1'] === 'tp_reagente' && dicionario['teste_2'] === 'n2_reagente'){
+					$('#instrucao_2').modal('show');
+				} else if (dicionario['teste_1'] === 'n_reagente' && dicionario['teste_2'] === ''){
+					$('#instrucao_3').modal('show');
+				} else if (dicionario['teste_1'] !== '' && dicionario['teste_2'] !== '') {
+					Swal.fire({
+						icon: 'error',
+						title: 'Conduta Errada',
+						html: 'Revise o conteúdo da <strong>Unidade 5</strong> do PCDT',
+					})
+				}
+		}
+	</script>
+
+
+	<script>
+		$(document).ready(function() {
+			let teste_1 = document.getElementById('teste_1');
+			let teste_2 = document.getElementById('teste_2');
+			let dict_testes = {'teste_1': '', 'teste_2': ''};
+
+			teste_1.addEventListener('click', function(e) {
+				if (e.target.tagName === 'LI' && e.target.classList[1]){
+					$("#teste_1 li").removeClass("active");
+					dict_testes['teste_1'] = e.target.id;
+					conduta(dict_testes);
+					$(`#${e.target.id}`).addClass("active");
+				} else {
+					dict_testes['teste_1'] = '';
+				}
+			});
+
+			teste_2.addEventListener('click', function(e) {
+				if (e.target.tagName === 'LI' && e.target.classList[1]){
+					$("#teste_2 li").removeClass("active");
+					dict_testes['teste_2'] = e.target.id;
+					conduta(dict_testes);
+					$(`#${e.target.id}`).addClass("active");
+				} else {
+					dict_testes['teste_2'] = '';
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
